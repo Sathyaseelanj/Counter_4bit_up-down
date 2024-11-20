@@ -40,11 +40,11 @@ Functional Simulation:
 	source /cadence/install/cshrc (mention the path of the tools) 
       (The path of cshrc could vary depending on the installation destination)
       
-	After this you can see the window like below 
+	After this you can see the window like below
+![Screenshot 2024-10-03 163749](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(53).png)
 
 
 ## Fig 2: Invoke the Cadence Environment
-
 
 ## Creating Source Code:
 
@@ -59,8 +59,6 @@ Functional Simulation:
 */Program  for  4-Bit Up-Down Counter
 
 	Use Save option or Ctrl+S to save the code or click on the save option from the top most right corner and close the text file.
-![Screenshot 2024-10-03 163749](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(53).png)
-
 
 ## Creating Test bench:
 
@@ -76,15 +74,14 @@ Functional Simulation:
 	linux:/> nclaunch&                 // On subsequent calls to NCVERILOG
 
 It will invoke the nclaunch window for functional simulation we can compile,elaborate and simulate it using Multiple step
+![Screenshot 2024-10-04 160147](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(54).png)
 
 ## Fig 3: Setting Multi-step simulation
 
 Select Multiple Step and then select “Create cds.lib File” as shown in below figure
 
 Click the cds.lib file and save the file by clicking on Save option
-![Screenshot 2024-10-04 160147](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(54).png)
-
-
+![Screenshot 2024-10-03 163824](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(55).png)
 
 ## Fig 4: cds.lib file Creation
 
@@ -93,7 +90,8 @@ Click the cds.lib file and save the file by clicking on Save option
 	Select “Don’t include any libraries (verilog design)” from “New cds.lib file” and click on “OK” as in below figure
 
 	We are simulating verilog design without using any libraries
-![Screenshot 2024-10-03 163824](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(55).png)
+
+![image](https://github.com/user-attachments/assets/65d4db5f-46ab-4036-9980-45707124b914)
 
 
 ## Fig 5: Selection of Don’t include any libraries
@@ -105,14 +103,12 @@ Click the cds.lib file and save the file by clicking on Save option
 	Left side you can see the HDL files. Right side of the window has worklib and snapshots directories listed.
 
 	Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation
-![image](https://github.com/user-attachments/assets/65d4db5f-46ab-4036-9980-45707124b914)
 
+![sathya](![Screenshot (69)](https://github.com/user-attachments/assets/76bbae66-074a-4533-a065-4cfcaf78e150)
 
 ## Fig 6: Nclaunch Window
 
 To perform the function simulation, the following three steps are involved Compilation, Elaboration and Simulation.
-![Screenshot 2024-10-03 150511](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(34).png)
-
 
 ## Step 1: Compilation:– Process to check the correct Verilog language syntax and usage 
 
@@ -133,6 +129,7 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 Left side select the file and in Tools : launch verilog compiler with current selection will get enable. Click it to compile the code 
 
 Worklib is the directory where all the compiled codes are stored while Snapshot will have output of elaboration which in turn goes for simulation 
+![Screenshot 2024-10-03 150511](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(33).png)
 
 ## Fig 7: Compiled database in worklib
 
@@ -142,8 +139,6 @@ i.e Cadence IES command for compile: ncverilog +access+rwc -compile fa.v
 
 	The cds.lib file is an ASCII text file. It defines which libraries are accessible and where they are located.
 It contains statements that map logical library names to their physical directory paths. For this Design, you will define a library called “worklib”
-![Screenshot 2024-10-03 150618](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(57).png)
-
 
 ## Step 2: Elaboration:– To check the port connections in hierarchical design 
 
@@ -164,10 +159,9 @@ It contains statements that map logical library names to their physical director
 9.	It also establishes net connectivity and prepares all of this for simulation
     
 	After elaboration the file will come under snapshot. Select the test bench and simulate it. 
+![sathya](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(34).png)
 
 ## Fig 8: Elaboration Launch Option
-![Screenshot 2024-10-03 163920](https://github.com/user-attachments/assets/fd0558d8-b940-4cc1-9c12-2515ee597e6b)
-
 
 ### Step 3: Simulation: – Simulate with the given test vectors over a period of time to observe the output behaviour. 
 
@@ -178,16 +172,19 @@ It contains statements that map logical library names to their physical director
 	Simulation allow to dump design and test bench signals into a waveform 
 
 	Steps for simulation – Run the simulation command with simulator options
+![sathya](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(57).png)
 
 ## Fig 9: Design Browser window for simulation
-![Screenshot 2024-10-03 163938](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(58).png)
 
+![sathya](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(58).png)
 
 ## Fig 10: Simulation Waveform Window
-![Screenshot 2024-10-03 163945](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(59).png)
+
+![Sathya](https://github.com/Sathyaseelanj/Counter_4bit_up-down/blob/main/Screenshot%20(59).png)
+
+## Fig 11: Simulation Waveform Window
+
 
 ### Result
 
 The functionality of a 4bit_up-down asynchronous reset Counter was successfully verified using a test bench and simulated with the nclaunch tool.
-
-
